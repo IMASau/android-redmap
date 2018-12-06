@@ -1,0 +1,212 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".LoginActivity" >
+
+    <!-- Login progress -->
+
+    <LinearLayout
+        android:id="@+id/login_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        
+        
+        
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/login_status_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/login_progress_signing_in"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+
+    <!-- Login form -->
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top" >
+
+        
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:padding="15dp" >
+
+        <TextView
+            android:id="@+id/TextView01"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login with your Redmap details"
+            android:textColor="#aaa" />
+
+        <RelativeLayout
+            android:id="@+id/username_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:clickable="true"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical"
+                android:text="Username"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <au.com.ionata.redmap.utils.sdk.EditTextFix
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/name"
+                android:hint="@string/username"
+                android:inputType="none"
+                android:maxLength="30"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/password_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:clickable="true"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical"
+                android:text="Password"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <au.com.ionata.redmap.utils.sdk.EditTextFix
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/name"
+                android:hint="@string/prompt_password"
+                android:imeActionId="@+id/login"
+                android:imeActionLabel="@string/action_sign_in_short"
+                android:imeOptions="actionUnspecified"
+                android:inputType="textPassword"
+                android:maxLength="128"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            
+            <Button
+                android:id="@+id/facebookLoginButton"
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/sign_in_button"
+                android:background="@drawable/facebook_button"
+                android:drawableLeft="@drawable/com_facebook_inverse_icon"
+                android:drawablePadding="10dp"
+                android:minHeight="42dp"
+                android:onClick="AttemptFacebookLogin"
+                android:text="Log in with Facebook"
+                android:textSize="16sp" />
+            
+            <Button
+                android:id="@+id/signInButton"
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/blue_button"
+                android:drawableLeft="@drawable/social_send_now"
+                android:minHeight="40dp"
+                android:onClick="AttemptLogin"
+                android:paddingBottom="7dp"
+                android:paddingTop="7dp"
+                android:text="Sign in"
+                android:textSize="16sp" />
+            
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/profile_divider"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Create account or offline mode"
+            android:textColor="#aaa" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp" >
+
+            <Button
+                android:id="@+id/Button01"
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/blue_button"
+                android:minHeight="40dp"
+                android:onClick="OfflineLoginOnClick"
+                android:text="Offline mode"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/new_account_button"
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/blue_button"
+                android:drawableLeft="@drawable/social_add_person"
+                android:minHeight="40dp"
+                android:onClick="CreateAccountOnClick"
+                android:paddingBottom="7dp"
+                android:paddingTop="7dp"
+                android:text="New account"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+        
+        </LinearLayout>
+    </ScrollView>
+
+</merge>

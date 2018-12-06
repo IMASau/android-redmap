@@ -1,0 +1,378 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateAccountActivity" >
+
+<ScrollView
+    android:id="@+id/scrollView1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:padding="15dp" >
+
+        <TextView
+            android:id="@+id/account_details_divider"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Account details"
+            android:textColor="#aaa" />
+
+        <RelativeLayout
+            android:id="@+id/username_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:duplicateParentState="true"
+                android:gravity="right|center_vertical"
+                android:minWidth="100dp"
+                android:text="Username"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <au.com.ionata.redmap.utils.sdk.EditTextFix
+                android:id="@+id/value_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/name"
+                android:clickable="false"
+                android:duplicateParentState="true"
+                android:editable="true"
+                android:ems="10"
+                android:enabled="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="left|center_vertical"
+                android:maxLength="30"
+                android:singleLine="true"
+                android:textColor="@color/redmap_blue"
+                android:textSize="14sp" >
+
+                <requestFocus />
+            </au.com.ionata.redmap.utils.sdk.EditTextFix>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/create_account_help_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingBottom="5dp"
+            android:text="The username should be between three and 30 characters: letters, numbers and @ . + - _"
+            android:textColor="#aaa"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#ccc" />
+
+        <RelativeLayout
+            android:id="@+id/password_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:clickable="true"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:duplicateParentState="true"
+                android:gravity="right|center_vertical"
+                android:minWidth="100dp"
+                android:text="Password"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <au.com.ionata.redmap.utils.sdk.EditTextFix
+                android:id="@+id/value_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/name"
+                android:clickable="false"
+                android:duplicateParentState="true"
+                android:editable="true"
+                android:enabled="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="left|center_vertical"
+                android:inputType="textPassword"
+                android:maxLength="128"
+                android:minWidth="100dp"
+                android:singleLine="true"
+                android:textColor="@color/redmap_blue"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.24"
+            android:gravity="right"
+            android:paddingBottom="5dp"
+            android:text="The password - minimum six characters"
+            android:textColor="#aaa"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/profile_divider"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textColor="#aaa" />
+
+        <RelativeLayout
+            android:id="@+id/first_name_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:clickable="true"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:duplicateParentState="true"
+                android:gravity="right|center_vertical"
+                android:minWidth="100dp"
+                android:text="First name"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <au.com.ionata.redmap.utils.sdk.EditTextFix
+                android:id="@+id/value_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/name"
+                android:clickable="false"
+                android:duplicateParentState="true"
+                android:editable="true"
+                android:enabled="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="left|center_vertical"
+                android:maxLength="30"
+                android:singleLine="true"
+                android:textColor="@color/redmap_blue"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#ccc" />
+
+        <RelativeLayout
+            android:id="@+id/last_name_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:clickable="true"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:duplicateParentState="true"
+                android:gravity="right|center_vertical"
+                android:minWidth="100dp"
+                android:text="Last name"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <au.com.ionata.redmap.utils.sdk.EditTextFix
+                android:id="@+id/value_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/name"
+                android:clickable="false"
+                android:duplicateParentState="true"
+                android:editable="true"
+                android:enabled="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="left|center_vertical"
+                android:maxLength="30"
+                android:singleLine="true"
+                android:textColor="@color/redmap_blue"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#ccc" />
+
+        <RelativeLayout
+            android:id="@+id/email_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:clickable="true"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:duplicateParentState="true"
+                android:gravity="right|center_vertical"
+                android:minWidth="100dp"
+                android:text="Email"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <au.com.ionata.redmap.utils.sdk.EditTextFix
+                android:id="@+id/value_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/name"
+                android:clickable="false"
+                android:duplicateParentState="true"
+                android:editable="true"
+                android:enabled="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="left|center_vertical"
+                android:inputType="textEmailAddress"
+                android:maxLength="75"
+                android:singleLine="true"
+                android:textColor="@color/redmap_blue"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#ccc" />
+
+        <RelativeLayout
+            android:id="@+id/join_mailing_list_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:clickable="true"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical"
+                android:text="Join mailing list"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <Switch
+                android:id="@+id/join_mailing_list_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/name"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/name"
+                android:checked="true"
+                android:gravity="right|center_vertical" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#ccc" />
+
+        <RelativeLayout
+            android:id="@+id/region_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/main_selector"
+            android:clickable="true"
+            android:onClick="RegionOnClick"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical"
+                android:text="Region"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <au.com.ionata.redmap.utils.sdk.EditTextFix
+                android:id="@+id/value_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/arrow"
+                android:layout_toRightOf="@+id/name"
+                android:background="@drawable/sighting_edittext_modified_states"
+                android:clickable="false"
+                android:duplicateParentState="true"
+                android:editable="false"
+                android:enabled="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="right|center_vertical"
+                android:hint="Select your region"
+                android:onClick="RegionOnClick"
+                android:singleLine="true"
+                android:textColor="@color/redmap_blue"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/main_navigate_to"
+                android:duplicateParentState="true"
+                android:src="@drawable/main_selector_arrow" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>
+    
+</RelativeLayout>

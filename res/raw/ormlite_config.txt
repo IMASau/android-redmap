@@ -1,0 +1,326 @@
+#
+# generated on 2013/10/14 10:41:17
+#
+# --table-start--
+dataClass=au.com.ionata.redmap.models.Region
+tableName=regions
+# --table-fields-start--
+# --field-start--
+fieldName=Id
+generatedId=true
+allowGeneratedIdInsert=true
+# --field-end--
+# --field-start--
+fieldName=Url
+# --field-end--
+# --field-start--
+fieldName=Slug
+# --field-end--
+# --field-start--
+fieldName=Description
+# --field-end--
+# --field-start--
+fieldName=SightingsUrl
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=au.com.ionata.redmap.models.User
+tableName=users
+# --table-fields-start--
+# --field-start--
+fieldName=Id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=Pk
+# --field-end--
+# --field-start--
+fieldName=Username
+# --field-end--
+# --field-start--
+fieldName=NewPassword
+# --field-end--
+# --field-start--
+fieldName=Email
+# --field-end--
+# --field-start--
+fieldName=FirstName
+# --field-end--
+# --field-start--
+fieldName=LastName
+# --field-end--
+# --field-start--
+fieldName=JoinMailingList
+# --field-end--
+# --field-start--
+fieldName=Region
+foreign=true
+foreignAutoRefresh=true
+maxForeignAutoRefreshLevel=3
+# --field-end--
+# --field-start--
+fieldName=Status
+# --field-end--
+# --field-start--
+fieldName=AuthToken
+# --field-end--
+# --field-start--
+fieldName=FacebookToken
+# --field-end--
+# --field-start--
+fieldName=LoggedIn
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=au.com.ionata.redmap.models.SpeciesRegion
+tableName=species_region
+# --table-fields-start--
+# --field-start--
+fieldName=Id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=Species
+foreign=true
+# --field-end--
+# --field-start--
+fieldName=Region
+foreign=true
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=au.com.ionata.redmap.models.Species
+tableName=species
+# --table-fields-start--
+# --field-start--
+fieldName=Id
+generatedId=true
+allowGeneratedIdInsert=true
+# --field-end--
+# --field-start--
+fieldName=Url
+# --field-end--
+# --field-start--
+fieldName=SpeciesName
+# --field-end--
+# --field-start--
+fieldName=CommonName
+# --field-end--
+# --field-start--
+fieldName=UpdateDateTime
+# --field-end--
+# --field-start--
+fieldName=ShortDescription
+# --field-end--
+# --field-start--
+fieldName=Description
+# --field-end--
+# --field-start--
+fieldName=Notes
+# --field-end--
+# --field-start--
+fieldName=ImageCredit
+# --field-end--
+# --field-start--
+fieldName=PictureUrl
+# --field-end--
+# --field-start--
+fieldName=PicturePath
+# --field-end--
+# --field-start--
+fieldName=PictureThumbnailPath
+# --field-end--
+# --field-start--
+fieldName=DistributionUrl
+# --field-end--
+# --field-start--
+fieldName=DistributionPicturePath
+# --field-end--
+# --field-start--
+fieldName=SightingsUrl
+# --field-end--
+# --field-start--
+fieldName=SpeciesCategorySpecies
+foreignCollection=true
+foreignCollectionEager=true
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=au.com.ionata.redmap.models.SpeciesCategorySpecies
+tableName=species_category_species
+# --table-fields-start--
+# --field-start--
+fieldName=Id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=Species
+foreign=true
+# --field-end--
+# --field-start--
+fieldName=SpeciesCategory
+foreign=true
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=au.com.ionata.redmap.models.SpeciesCategory
+tableName=species_category
+# --table-fields-start--
+# --field-start--
+fieldName=Id
+generatedId=true
+allowGeneratedIdInsert=true
+# --field-end--
+# --field-start--
+fieldName=Url
+# --field-end--
+# --field-start--
+fieldName=Description
+# --field-end--
+# --field-start--
+fieldName=LongDescription
+# --field-end--
+# --field-start--
+fieldName=Picture
+dataPersister=BYTE_ARRAY
+# --field-end--
+# --field-start--
+fieldName=SpeciesCategorySpecies
+foreignCollection=true
+foreignCollectionEager=true
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=au.com.ionata.redmap.models.Sighting
+tableName=sightings
+# --table-fields-start--
+# --field-start--
+fieldName=Id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=Pk
+# --field-end--
+# --field-start--
+fieldName=Status
+# --field-end--
+# --field-start--
+fieldName=User
+foreign=true
+# --field-end--
+# --field-start--
+fieldName=SpeciesId
+# --field-end--
+# --field-start--
+fieldName=OtherSpecies
+# --field-end--
+# --field-start--
+fieldName=ActivityId
+# --field-end--
+# --field-start--
+fieldName=CountId
+# --field-end--
+# --field-start--
+fieldName=AccuracyId
+# --field-end--
+# --field-start--
+fieldName=SexId
+# --field-end--
+# --field-start--
+fieldName=HabitatId
+# --field-end--
+# --field-start--
+fieldName=Weight
+# --field-end--
+# --field-start--
+fieldName=WeightMethodId
+# --field-end--
+# --field-start--
+fieldName=Size
+# --field-end--
+# --field-start--
+fieldName=RegionId
+# --field-end--
+# --field-start--
+fieldName=SizeMethodId
+# --field-end--
+# --field-start--
+fieldName=SightingDateYear
+# --field-end--
+# --field-start--
+fieldName=SightingDateMonth
+# --field-end--
+# --field-start--
+fieldName=SightingDateDay
+# --field-end--
+# --field-start--
+fieldName=TimeId
+# --field-end--
+# --field-start--
+fieldName=PictureUrl
+# --field-end--
+# --field-start--
+fieldName=PicturePath
+# --field-end--
+# --field-start--
+fieldName=PictureThumbnailPath
+# --field-end--
+# --field-start--
+fieldName=Latitude
+# --field-end--
+# --field-start--
+fieldName=Longitude
+# --field-end--
+# --field-start--
+fieldName=LoggingDate
+# --field-end--
+# --field-start--
+fieldName=UpdateDate
+# --field-end--
+# --field-start--
+fieldName=Depth
+# --field-end--
+# --field-start--
+fieldName=Temperature
+# --field-end--
+# --field-start--
+fieldName=IsPublished
+# --field-end--
+# --field-start--
+fieldName=IsValid
+# --field-end--
+# --field-start--
+fieldName=AdditionalComments
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=au.com.ionata.redmap.models.Settings
+tableName=settings
+# --table-fields-start--
+# --field-start--
+fieldName=Id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=LastSync
+# --field-end--
+# --field-start--
+fieldName=SightingOptions
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################

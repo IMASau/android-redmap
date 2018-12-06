@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".SpeciesDetailActivity" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <au.com.ionata.redmap.screens.gui.ResizableImageView
+                android:id="@+id/sightingImageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitStart"
+                android:src="@drawable/species_image_shark_and_rays" />
+            
+            <RelativeLayout
+                android:id="@+id/sightingDetailsBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="124dp"
+                    android:layout_marginBottom="13dp"
+                    android:background="#848484"
+                    android:padding="10dp"
+                    android:paddingTop="10dp" >
+
+                    <ImageView
+                        android:id="@+id/sightingDetailsMap"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/australia_google_map" />
+
+                    <TextView
+                        android:id="@+id/spottedOnLabel"
+                        android:layout_width="159dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/sightingDetailsMap"
+                        android:layout_alignLeft="@+id/linearLayout1"
+                        android:layout_alignParentRight="true"
+                        android:paddingLeft="10dp"
+                        android:text="Spotted on: "
+                        android:textColor="#ffffff" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/spottedOnLabel"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/sightingDetailsMap"
+                        android:layout_toRightOf="@+id/sightingDetailsMap"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp" >
+
+                        <TextView
+                            android:id="@+id/speciesCommoneName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="55dp"
+                            android:text="Greenurtleaaaaaaaaaaa"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="#ffffff" />
+
+                        <TextView
+                            android:id="@+id/speciesLabel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="55dp"
+                            android:text="Chelonia mydas"
+                            android:textColor="#ffffff" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/notValidLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/not_validated_right" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

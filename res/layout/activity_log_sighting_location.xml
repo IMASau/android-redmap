@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LogSightingLocationActivity" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent" >
+
+        <org.osmdroid.views.MapView
+            android:id="@+id/log_sighting_map_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/sighting_location_help"
+            android:layout_alignParentTop="true" >
+
+        </org.osmdroid.views.MapView>
+
+        <RelativeLayout
+            android:id="@+id/sighting_location_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_horizontal"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/imageView1"
+                android:layout_alignTop="@+id/imageView1"
+                android:layout_toRightOf="@+id/imageView1"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="Press and hold to place a marker at the sighting location." />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="false"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_launcher" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

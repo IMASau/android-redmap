@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_selector"
+    android:clickable="false"
+    android:focusable="false"
+    android:focusableInTouchMode="false" >
+
+    <ImageView
+        android:id="@+id/option_icon"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:background="#fff"
+        android:duplicateParentState="true"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/fish_silhouette" />
+
+
+	<TextView
+                    android:id="@+id/sighting_spotted_on"
+                    android:layout_width="159dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/option_icon"
+                    android:layout_alignLeft="@+id/linearLayout1"
+                    android:layout_alignParentRight="true"
+                    android:paddingLeft="10dp"
+                    android:text="Spotted on: "
+                    android:textColor="#ffffff" />
+	<LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/spottedOnLabel"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/option_icon"
+                    android:layout_toRightOf="@+id/option_icon"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp" >
+
+                    <TextView
+                        android:id="@+id/sighting_common_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Greenurtleaaaaaaaaaaa"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#ffffff" />
+
+                    <TextView
+                        android:id="@+id/sighting_species_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Chelonia mydas"
+                        android:textColor="#ffffff" />
+
+                </LinearLayout>
+    
+    
+
+</RelativeLayout>

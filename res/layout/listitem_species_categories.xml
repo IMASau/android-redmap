@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_selector"
+    android:focusable="false"
+    android:focusableInTouchMode="false" >
+
+	<ImageView
+	    android:id="@+id/option_icon"
+	    android:layout_width="75dp"
+	    android:layout_height="75dp"
+	    android:background="#fff"
+	    android:padding="5dp"
+	    android:src="@drawable/fish_silhouette" />
+
+	<TextView
+	    android:id="@+id/option_text"
+	    android:layout_width="fill_parent"
+	    android:layout_height="70dp"
+	    android:layout_alignBottom="@+id/option_icon"
+	    android:layout_alignParentTop="true"
+	    android:layout_toRightOf="@+id/option_icon"
+	    android:gravity="center_vertical"
+	    android:paddingLeft="5sp"
+	    android:text="Algae &amp; Plants"
+	    android:textColor="@color/redmap_blue"
+	    android:textSize="20dp" >
+
+	</TextView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_alignRight="@id/option_text"
+        android:contentDescription="@string/main_navigate_to"
+        android:duplicateParentState="true"
+        android:src="@drawable/main_selector_arrow" />
+	
+</RelativeLayout>

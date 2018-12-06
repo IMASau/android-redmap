@@ -1,0 +1,699 @@
+{
+  "count": [
+  {
+    "pk": 1, 
+    "model": "redmapdb.count", 
+    "fields": {
+      "update_number": 0, 
+      "code": "1", 
+      "description": "1"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "redmapdb.count", 
+    "fields": {
+      "update_number": 0, 
+      "code": "2-5", 
+      "description": "2-5"
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "redmapdb.count", 
+    "fields": {
+      "update_number": 0, 
+      "code": "6-20", 
+      "description": "6-20"
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "redmapdb.count", 
+    "fields": {
+      "update_number": 0, 
+      "code": "21+", 
+      "description": "21+"
+    }
+  }
+], 
+  "organisation": [
+  {
+    "pk": 2, 
+    "model": "redmapdb.organisation", 
+    "fields": {
+      "description": "Institute for Marine and Antarctic Studies"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "redmapdb.organisation", 
+    "fields": {
+      "description": "Museum Victoria"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "redmapdb.organisation", 
+    "fields": {
+      "description": "NSW Department of Primary Industries"
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "redmapdb.organisation", 
+    "fields": {
+      "description": "WA Department of Fisheries"
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "redmapdb.organisation", 
+    "fields": {
+      "description": "PIRSA Fisheries & Aquaculture"
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "redmapdb.organisation", 
+    "fields": {
+      "description": "University of Newcastle"
+    }
+  }, 
+  {
+    "pk": 9, 
+    "model": "redmapdb.organisation", 
+    "fields": {
+      "description": "Rec Fish Australia"
+    }
+  }, 
+  {
+    "pk": 10, 
+    "model": "redmapdb.organisation", 
+    "fields": {
+      "description": "Seafood Industry Council"
+    }
+  }, 
+  {
+    "pk": 11, 
+    "model": "redmapdb.organisation", 
+    "fields": {
+      "description": "SDFSA"
+    }
+  }, 
+  {
+    "pk": 12, 
+    "model": "redmapdb.organisation", 
+    "fields": {
+      "description": "OceanWatch Australia"
+    }
+  }, 
+  {
+    "pk": 13, 
+    "model": "redmapdb.organisation", 
+    "fields": {
+      "description": "Charles Darwin University"
+    }
+  }, 
+  {
+    "pk": 15, 
+    "model": "redmapdb.organisation", 
+    "fields": {
+      "description": "Vic Fisheries"
+    }
+  }, 
+  {
+    "pk": 16, 
+    "model": "redmapdb.organisation", 
+    "fields": {
+      "description": "CSIRO Marine Research"
+    }
+  }, 
+  {
+    "pk": 17, 
+    "model": "redmapdb.organisation", 
+    "fields": {
+      "description": "DAFF"
+    }
+  }, 
+  {
+    "pk": 18, 
+    "model": "redmapdb.organisation", 
+    "fields": {
+      "description": "James Cook University"
+    }
+  }, 
+  {
+    "pk": 19, 
+    "model": "redmapdb.organisation", 
+    "fields": {
+      "description": "Tasmanian Museum and Art Gallery"
+    }
+  }, 
+  {
+    "pk": 22, 
+    "model": "redmapdb.organisation", 
+    "fields": {
+      "description": "Conservation Council SA"
+    }
+  }, 
+  {
+    "pk": 23, 
+    "model": "redmapdb.organisation", 
+    "fields": {
+      "description": "Australian Museum"
+    }
+  }, 
+  {
+    "pk": 24, 
+    "model": "redmapdb.organisation", 
+    "fields": {
+      "description": "SARDI"
+    }
+  }, 
+  {
+    "pk": 25, 
+    "model": "redmapdb.organisation", 
+    "fields": {
+      "description": "University of Adelaide"
+    }
+  }, 
+  {
+    "pk": 26, 
+    "model": "redmapdb.organisation", 
+    "fields": {
+      "description": "South Australian Museum"
+    }
+  }, 
+  {
+    "pk": 27, 
+    "model": "redmapdb.organisation", 
+    "fields": {
+      "description": "C2O Fisheries"
+    }
+  }
+], 
+  "size_method": [
+  {
+    "pk": 1, 
+    "model": "redmapdb.sizemethod", 
+    "fields": {
+      "update_number": 0, 
+      "code": "E", 
+      "description": "Estimated"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "redmapdb.sizemethod", 
+    "fields": {
+      "update_number": 0, 
+      "code": "M", 
+      "description": "Measured"
+    }
+  }
+], 
+  "habitat": [
+  {
+    "pk": 1, 
+    "model": "redmapdb.habitat", 
+    "fields": {
+      "update_number": 1, 
+      "code": "RE", 
+      "description": "Reef"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "redmapdb.habitat", 
+    "fields": {
+      "update_number": 1, 
+      "code": "SA", 
+      "description": "Sand"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "redmapdb.habitat", 
+    "fields": {
+      "update_number": 1, 
+      "code": "SE", 
+      "description": "Seagrass"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "redmapdb.habitat", 
+    "fields": {
+      "update_number": 1, 
+      "code": "OW", 
+      "description": "Open water"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "redmapdb.habitat", 
+    "fields": {
+      "update_number": 1, 
+      "code": "UK", 
+      "description": "Unknown"
+    }
+  }
+], 
+  "region": [
+  {
+    "pk": 1, 
+    "model": "redmapdb.region", 
+    "fields": {
+      "jurisdiction": 1, 
+      "description": "Western Australia", 
+      "slug": "wa"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "redmapdb.region", 
+    "fields": {
+      "jurisdiction": 2, 
+      "description": "South Australia", 
+      "slug": "sa"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "redmapdb.region", 
+    "fields": {
+      "jurisdiction": 3, 
+      "description": "New South Wales", 
+      "slug": "nsw"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "redmapdb.region", 
+    "fields": {
+      "jurisdiction": 4, 
+      "description": "Victoria", 
+      "slug": "vic"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "redmapdb.region", 
+    "fields": {
+      "jurisdiction": 5, 
+      "description": "Tasmania", 
+      "slug": "tas"
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "redmapdb.region", 
+    "fields": {
+      "jurisdiction": 6, 
+      "description": "Queensland", 
+      "slug": "qld"
+    }
+  }
+], 
+  "activity": [
+  {
+    "pk": 1, 
+    "model": "redmapdb.activity", 
+    "fields": {
+      "update_number": 0, 
+      "code": "F", 
+      "description": "Fishing"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "redmapdb.activity", 
+    "fields": {
+      "update_number": 0, 
+      "code": "D", 
+      "description": "Diving"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "redmapdb.activity", 
+    "fields": {
+      "update_number": 0, 
+      "code": "S", 
+      "description": "Swimming"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "redmapdb.activity", 
+    "fields": {
+      "update_number": 0, 
+      "code": "B", 
+      "description": "Boating"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "redmapdb.activity", 
+    "fields": {
+      "update_number": 0, 
+      "code": "C", 
+      "description": "Beach combing"
+    }
+  }
+], 
+  "sex": [
+  {
+    "pk": 1, 
+    "model": "redmapdb.sex", 
+    "fields": {
+      "update_number": 0, 
+      "code": "U", 
+      "description": "Unknown"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "redmapdb.sex", 
+    "fields": {
+      "update_number": 0, 
+      "code": "M", 
+      "description": "Male"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "redmapdb.sex", 
+    "fields": {
+      "update_number": 0, 
+      "code": "F", 
+      "description": "Female"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "redmapdb.sex", 
+    "fields": {
+      "update_number": 0, 
+      "code": "J", 
+      "description": "Juvenile"
+    }
+  }
+], 
+  "weight_method": [
+  {
+    "pk": 1, 
+    "model": "redmapdb.weightmethod", 
+    "fields": {
+      "update_number": 1, 
+      "code": "M", 
+      "description": "Measured"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "redmapdb.weightmethod", 
+    "fields": {
+      "update_number": 1, 
+      "code": "E", 
+      "description": "Estimated"
+    }
+  }
+], 
+  "time": [
+  {
+    "pk": 1, 
+    "model": "redmapdb.time", 
+    "fields": {
+      "update_number": 1, 
+      "code": "00", 
+      "description": "00:00 am (Midnight)"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "redmapdb.time", 
+    "fields": {
+      "update_number": 0, 
+      "code": "01", 
+      "description": "01:00 am"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "redmapdb.time", 
+    "fields": {
+      "update_number": 0, 
+      "code": "01", 
+      "description": "02:00 am"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "redmapdb.time", 
+    "fields": {
+      "update_number": 0, 
+      "code": "02", 
+      "description": "02:00 am"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "redmapdb.time", 
+    "fields": {
+      "update_number": 0, 
+      "code": "03", 
+      "description": "03:00 am"
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "redmapdb.time", 
+    "fields": {
+      "update_number": 0, 
+      "code": "04", 
+      "description": "04:00 am"
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "redmapdb.time", 
+    "fields": {
+      "update_number": 0, 
+      "code": "05", 
+      "description": "05:00 am"
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "redmapdb.time", 
+    "fields": {
+      "update_number": 0, 
+      "code": "06", 
+      "description": "06:00 am"
+    }
+  }, 
+  {
+    "pk": 9, 
+    "model": "redmapdb.time", 
+    "fields": {
+      "update_number": 0, 
+      "code": "07", 
+      "description": "07:00 am"
+    }
+  }, 
+  {
+    "pk": 10, 
+    "model": "redmapdb.time", 
+    "fields": {
+      "update_number": 0, 
+      "code": "08", 
+      "description": "08:00 am"
+    }
+  }, 
+  {
+    "pk": 11, 
+    "model": "redmapdb.time", 
+    "fields": {
+      "update_number": 0, 
+      "code": "09", 
+      "description": "09:00 am"
+    }
+  }, 
+  {
+    "pk": 12, 
+    "model": "redmapdb.time", 
+    "fields": {
+      "update_number": 0, 
+      "code": "10", 
+      "description": "10:00 am"
+    }
+  }, 
+  {
+    "pk": 13, 
+    "model": "redmapdb.time", 
+    "fields": {
+      "update_number": 0, 
+      "code": "11", 
+      "description": "11:00 am"
+    }
+  }, 
+  {
+    "pk": 14, 
+    "model": "redmapdb.time", 
+    "fields": {
+      "update_number": 1, 
+      "code": "12", 
+      "description": "12:00 pm (Noon)"
+    }
+  }, 
+  {
+    "pk": 15, 
+    "model": "redmapdb.time", 
+    "fields": {
+      "update_number": 0, 
+      "code": "13", 
+      "description": "01:00 pm"
+    }
+  }, 
+  {
+    "pk": 16, 
+    "model": "redmapdb.time", 
+    "fields": {
+      "update_number": 0, 
+      "code": "14", 
+      "description": "02:00 pm"
+    }
+  }, 
+  {
+    "pk": 17, 
+    "model": "redmapdb.time", 
+    "fields": {
+      "update_number": 0, 
+      "code": "15", 
+      "description": "03:00 pm"
+    }
+  }, 
+  {
+    "pk": 18, 
+    "model": "redmapdb.time", 
+    "fields": {
+      "update_number": 0, 
+      "code": "16", 
+      "description": "04:00 pm"
+    }
+  }, 
+  {
+    "pk": 19, 
+    "model": "redmapdb.time", 
+    "fields": {
+      "update_number": 0, 
+      "code": "17", 
+      "description": "05:00 pm"
+    }
+  }, 
+  {
+    "pk": 20, 
+    "model": "redmapdb.time", 
+    "fields": {
+      "update_number": 0, 
+      "code": "18", 
+      "description": "06:00 pm"
+    }
+  }, 
+  {
+    "pk": 21, 
+    "model": "redmapdb.time", 
+    "fields": {
+      "update_number": 0, 
+      "code": "19", 
+      "description": "07:00 pm"
+    }
+  }, 
+  {
+    "pk": 22, 
+    "model": "redmapdb.time", 
+    "fields": {
+      "update_number": 0, 
+      "code": "20", 
+      "description": "08:00 pm"
+    }
+  }, 
+  {
+    "pk": 23, 
+    "model": "redmapdb.time", 
+    "fields": {
+      "update_number": 0, 
+      "code": "21", 
+      "description": "09:00 pm"
+    }
+  }, 
+  {
+    "pk": 24, 
+    "model": "redmapdb.time", 
+    "fields": {
+      "update_number": 0, 
+      "code": "22", 
+      "description": "10:00 pm"
+    }
+  }, 
+  {
+    "pk": 25, 
+    "model": "redmapdb.time", 
+    "fields": {
+      "update_number": 0, 
+      "code": "23", 
+      "description": "11:00 pm"
+    }
+  }, 
+  {
+    "pk": 26, 
+    "model": "redmapdb.time", 
+    "fields": {
+      "update_number": 1, 
+      "code": "NS", 
+      "description": "Not sure"
+    }
+  }
+], 
+  "method": [], 
+  "accuracy": [
+  {
+    "pk": 2, 
+    "model": "redmapdb.accuracy", 
+    "fields": {
+      "update_number": 0, 
+      "code": "10", 
+      "description": "Within 10 metres"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "redmapdb.accuracy", 
+    "fields": {
+      "update_number": 0, 
+      "code": "100", 
+      "description": "Within 100 metres"
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "redmapdb.accuracy", 
+    "fields": {
+      "update_number": 0, 
+      "code": "1000", 
+      "description": "Within 1 kilometre"
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "redmapdb.accuracy", 
+    "fields": {
+      "update_number": 0, 
+      "code": "10000", 
+      "description": "Within 10 kilometres"
+    }
+  }
+]
+}

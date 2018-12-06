@@ -1,0 +1,927 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LogSightingActivity" >
+
+<ScrollView
+    android:id="@+id/scrollView1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+	>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:padding="15dp" >
+
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.38" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="Please add a photo to your sighting so it can be verified by a scientist" />
+
+        </RelativeLayout>
+
+        
+        <RelativeLayout
+            android:id="@+id/image_selector_layout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_weight="0.38"
+            android:background="@drawable/main_selector"
+            android:clickable="true"
+            android:onClick="SelectSightingPhotoOnClick"
+            android:padding="5dp" >
+
+            <ImageView
+                android:id="@+id/log_sighting_photo_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/sighting_photo"
+                android:src="@drawable/indicator_input_error"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/sighting_photo"
+                android:layout_width="100dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:adjustViewBounds="true"
+                android:duplicateParentState="true"
+                android:src="@drawable/add_image" />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/sighting_photo"
+                android:layout_toRightOf="@id/sighting_photo"
+                android:paddingLeft="15dp"
+                android:src="@drawable/arrow_ur" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/profile_divider"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sighting"
+            android:textColor="#aaa" />
+
+        <RelativeLayout
+            android:id="@+id/species_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/main_selector"
+            android:clickable="true"
+            android:onClick="SpeciesOnClick"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical"
+                android:text="Species"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/main_navigate_to"
+                android:duplicateParentState="true"
+                android:src="@drawable/main_selector_arrow" />
+
+            <au.com.ionata.redmap.utils.sdk.EditTextFix
+                android:id="@+id/value_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/arrow"
+                android:layout_toRightOf="@+id/name"
+                android:background="@drawable/sighting_edittext_modified_states"
+                android:clickable="false"
+                android:drawablePadding="10dp"
+                android:duplicateParentState="true"
+                android:editable="false"
+                android:enabled="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="right|center_vertical"
+                android:hint="Select a species"
+                android:onClick="SpeciesOnClick"
+                android:singleLine="true"
+                android:textColor="@color/redmap_blue"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#ccc" />
+
+        <RelativeLayout
+            android:id="@+id/activity_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/main_selector"
+            android:clickable="true"
+            android:onClick="ActivityOnClick"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical"
+                android:text="Activity"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/main_navigate_to"
+                android:duplicateParentState="true"
+                android:src="@drawable/main_selector_arrow" />
+
+            <au.com.ionata.redmap.utils.sdk.EditTextFix
+                android:id="@+id/value_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/arrow"
+                android:layout_toRightOf="@+id/name"
+                android:background="@drawable/sighting_edittext_modified_states"
+                android:clickable="false"
+                android:drawablePadding="10dp"
+                android:duplicateParentState="true"
+                android:editable="false"
+                android:enabled="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="right|center_vertical"
+                android:hint="Select the activity"
+                android:onClick="ActivityOnClick"
+                android:singleLine="true"
+                android:textColor="@color/redmap_blue"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/sighting_location_divider"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Location"
+            android:textColor="#aaa" />
+
+        <RelativeLayout
+            android:id="@+id/location_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/main_selector"
+            android:clickable="true"
+            android:onClick="LocationOnClick"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical"
+                android:text="Location"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/main_navigate_to"
+                android:duplicateParentState="true"
+                android:src="@drawable/main_selector_arrow" />
+
+            <au.com.ionata.redmap.utils.sdk.EditTextFix
+                android:id="@+id/value_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/arrow"
+                android:layout_toRightOf="@+id/name"
+                android:background="@drawable/sighting_edittext_modified_states"
+                android:clickable="false"
+                android:drawablePadding="10dp"
+                android:duplicateParentState="true"
+                android:editable="false"
+                android:enabled="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="right|center_vertical"
+                android:hint="Select sighting location"
+                android:onClick="LocationOnClick"
+                android:singleLine="true"
+                android:textColor="@color/redmap_blue"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#ccc" />
+
+        <RelativeLayout
+            android:id="@+id/accuracy_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/main_selector"
+            android:clickable="true"
+            android:onClick="AccuracyOnClick"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:clickable="false"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical"
+                android:text="Accuracy"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/main_navigate_to"
+                android:duplicateParentState="true"
+                android:src="@drawable/main_selector_arrow" />
+
+            <au.com.ionata.redmap.utils.sdk.EditTextFix
+                android:id="@+id/value_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/arrow"
+                android:layout_toRightOf="@+id/name"
+                android:background="@drawable/sighting_edittext_modified_states"
+                android:clickable="false"
+                android:drawablePadding="10dp"
+                android:duplicateParentState="true"
+                android:editable="false"
+                android:enabled="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="right|center_vertical"
+                android:hint="Accuracy of this location"
+                android:onClick="AccuracyOnClick"
+                android:singleLine="true"
+                android:textColor="@color/redmap_blue"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/details_divider"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Date &amp; time"
+            android:textColor="#aaa" />
+
+        <RelativeLayout
+            android:id="@+id/date_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/main_selector"
+            android:clickable="true"
+            android:onClick="showDatePickerDialog"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical"
+                android:text="Date"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/main_navigate_to"
+                android:duplicateParentState="true"
+                android:src="@drawable/main_selector_arrow" />
+
+            <au.com.ionata.redmap.utils.sdk.EditTextFix
+                android:id="@+id/value_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/arrow"
+                android:layout_toRightOf="@+id/name"
+                android:background="@drawable/sighting_edittext_modified_states"
+                android:clickable="false"
+                android:drawablePadding="10dp"
+                android:duplicateParentState="true"
+                android:editable="false"
+                android:enabled="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="right|center_vertical"
+                android:hint="Date of the sighting"
+                android:onClick="showDatePickerDialog"
+                android:singleLine="true"
+                android:textColor="@color/redmap_blue"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#ccc" />
+
+        <RelativeLayout
+            android:id="@+id/time_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/main_selector"
+            android:clickable="true"
+            android:onClick="TimeOnClick"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical"
+                android:text="Time"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/main_navigate_to"
+                android:duplicateParentState="true"
+                android:src="@drawable/main_selector_arrow" />
+
+            <au.com.ionata.redmap.utils.sdk.EditTextFix
+                android:id="@+id/value_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/arrow"
+                android:layout_toRightOf="@+id/name"
+                android:background="@drawable/sighting_edittext_modified_states"
+                android:clickable="false"
+                android:drawablePadding="10dp"
+                android:duplicateParentState="true"
+                android:editable="false"
+                android:enabled="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="right|center_vertical"
+                android:hint="Time of the sighting"
+                android:onClick="TimeOnClick"
+                android:singleLine="true"
+                android:textColor="@color/redmap_blue"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/details_divider"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Details"
+            android:textColor="#aaa" />
+
+        <RelativeLayout
+            android:id="@+id/count_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/main_selector"
+            android:clickable="true"
+            android:onClick="CountOnClick"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical"
+                android:text="Count"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/main_navigate_to"
+                android:duplicateParentState="true"
+                android:src="@drawable/main_selector_arrow" />
+
+            <au.com.ionata.redmap.utils.sdk.EditTextFix
+                android:id="@+id/value_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/arrow"
+                android:layout_toRightOf="@+id/name"
+                android:background="@drawable/sighting_edittext_modified_states"
+                android:clickable="false"
+                android:drawablePadding="10dp"
+                android:duplicateParentState="true"
+                android:editable="false"
+                android:enabled="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="right|center_vertical"
+                android:hint="How many did you see?"
+                android:onClick="CountOnClick"
+                android:singleLine="true"
+                android:textColor="@color/redmap_blue"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#ccc" />
+
+        <RelativeLayout
+            android:id="@+id/sex_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/main_selector"
+            android:clickable="true"
+            android:onClick="SexOnClick"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical"
+                android:text="Sex"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/main_navigate_to"
+                android:duplicateParentState="true"
+                android:src="@drawable/main_selector_arrow" />
+
+            <au.com.ionata.redmap.utils.sdk.EditTextFix
+                android:id="@+id/value_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/arrow"
+                android:layout_toRightOf="@+id/name"
+                android:background="@drawable/sighting_edittext_modified_states"
+                android:clickable="false"
+                android:drawablePadding="10dp"
+                android:duplicateParentState="true"
+                android:editable="false"
+                android:enabled="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="right|center_vertical"
+                android:hint="Select the sex"
+                android:onClick="SexOnClick"
+                android:singleLine="true"
+                android:textColor="@color/redmap_blue"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#ccc" />
+
+        <RelativeLayout
+            android:id="@+id/weight_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/main_selector"
+            android:clickable="true"
+            android:onClick="WeightOnClick"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical"
+                android:text="Weight"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/main_navigate_to"
+                android:duplicateParentState="true"
+                android:src="@drawable/main_selector_arrow" />
+
+            <au.com.ionata.redmap.utils.sdk.EditTextFix
+                android:id="@+id/value_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/arrow"
+                android:layout_toRightOf="@+id/name"
+                android:background="@drawable/sighting_edittext_modified_states"
+                android:clickable="false"
+                android:drawablePadding="10dp"
+                android:duplicateParentState="true"
+                android:editable="false"
+                android:enabled="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="right|center_vertical"
+                android:hint="Select the weight"
+                android:onClick="WeightOnClick"
+                android:singleLine="true"
+                android:textColor="@color/redmap_blue"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#ccc" />
+
+        <RelativeLayout
+            android:id="@+id/size_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/main_selector"
+            android:clickable="true"
+            android:onClick="SizeOnClick"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical"
+                android:text="Size"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/main_navigate_to"
+                android:duplicateParentState="true"
+                android:src="@drawable/main_selector_arrow" />
+
+            <au.com.ionata.redmap.utils.sdk.EditTextFix
+                android:id="@+id/value_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/arrow"
+                android:layout_toRightOf="@+id/name"
+                android:background="@drawable/sighting_edittext_modified_states"
+                android:clickable="false"
+                android:drawablePadding="10dp"
+                android:duplicateParentState="true"
+                android:editable="false"
+                android:enabled="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="right|center_vertical"
+                android:hint="Select a size"
+                android:onClick="SizeOnClick"
+                android:singleLine="true"
+                android:textColor="@color/redmap_blue"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#ccc" />
+
+        <RelativeLayout
+            android:id="@+id/habitat_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/main_selector"
+            android:clickable="true"
+            android:onClick="HabitatOnClick"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical"
+                android:text="Habitat"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/main_navigate_to"
+                android:duplicateParentState="true"
+                android:src="@drawable/main_selector_arrow" />
+
+            <au.com.ionata.redmap.utils.sdk.EditTextFix
+                android:id="@+id/value_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/arrow"
+                android:layout_toRightOf="@+id/name"
+                android:background="@drawable/sighting_edittext_modified_states"
+                android:clickable="false"
+                android:drawablePadding="10dp"
+                android:duplicateParentState="true"
+                android:editable="false"
+                android:enabled="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="right|center_vertical"
+                android:hint="Select the habitat"
+                android:onClick="HabitatOnClick"
+                android:singleLine="true"
+                android:textColor="@color/redmap_blue"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#ccc" />
+
+        <RelativeLayout
+            android:id="@+id/depth_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/main_selector"
+            android:clickable="true"
+            android:onClick="DepthOnClick"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical"
+                android:text="Depth"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/main_navigate_to"
+                android:duplicateParentState="true"
+                android:src="@drawable/main_selector_arrow" />
+
+            <au.com.ionata.redmap.utils.sdk.EditTextFix
+                android:id="@+id/value_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/arrow"
+                android:layout_toRightOf="@+id/name"
+                android:background="@drawable/sighting_edittext_modified_states"
+                android:clickable="false"
+                android:drawablePadding="10dp"
+                android:duplicateParentState="true"
+                android:editable="false"
+                android:enabled="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="right|center_vertical"
+                android:hint="Select the depth"
+                android:onClick="DepthOnClick"
+                android:singleLine="true"
+                android:textColor="@color/redmap_blue"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#ccc" />
+
+        <RelativeLayout
+            android:id="@+id/temperature_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/main_selector"
+            android:clickable="true"
+            android:onClick="TemperatureOnClick"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical"
+                android:text="Water temperature"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/main_navigate_to"
+                android:duplicateParentState="true"
+                android:src="@drawable/main_selector_arrow" />
+
+            <au.com.ionata.redmap.utils.sdk.EditTextFix
+                android:id="@+id/value_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/arrow"
+                android:layout_toRightOf="@+id/name"
+                android:background="@drawable/sighting_edittext_modified_states"
+                android:clickable="false"
+                android:drawablePadding="10dp"
+                android:duplicateParentState="true"
+                android:editable="false"
+                android:enabled="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="right|center_vertical"
+                android:hint="The water temperature"
+                android:onClick="TemperatureOnClick"
+                android:singleLine="true"
+                android:textColor="@color/redmap_blue"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/extra_divider"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Comment"
+            android:textColor="#aaa" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.28"
+            android:padding="10dp"
+            android:text="This text will appear under your photo on the Redmap website"
+            android:textColor="#aaa" />
+
+        <au.com.ionata.redmap.utils.sdk.EditTextFix
+            android:id="@+id/additional_comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Additional comments"
+            android:inputType="textMultiLine"
+            android:maxLength="500" />
+    </LinearLayout>
+
+</ScrollView>
+    
+</RelativeLayout>

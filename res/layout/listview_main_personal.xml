@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+ 
+    <!--  ListRow Left sied Thumbnail image -->
+
+    <LinearLayout
+        android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="10dp"
+        android:padding="3dip" >
+ 
+        <ImageView
+            android:id="@+id/list_image"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:contentDescription="@string/main_personal"
+            android:scaleType="center"
+            android:src="@drawable/uitableviewcell_personal" />
+ 
+    </LinearLayout>
+ 
+    <!-- Title Of Song-->
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:paddingTop="8dp"
+        android:text="@string/main_personal"
+        android:textColor="#257ABC"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="sans" />
+ 
+    <!-- Artist Name -->
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="@string/main_personal_description"
+        android:textColor="#7F7F7F"
+        android:textSize="15sp" />
+ 
+    <!-- Rightend Duration -->
+ 
+     <!-- Rightend Arrow -->
+     <ImageView 
+        android:contentDescription="@string/main_navigate_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/uitableviewcell_disclosure_default"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+ 
+</RelativeLayout>

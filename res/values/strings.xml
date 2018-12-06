@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <string name="app_name">Redmap</string>
+    <string name="action_settings">Settings</string>
+    <string name="how_you_help">Redmap brings fishers, divers and scientists together with a common passion.</string>
+    <string name="title_activity_species">Species</string>
+    <string name="menu_quit_item">Quit</string>
+    <string name="title_activity_species_listing">Species</string>
+    <string name="title_activity_species_detail">Species details</string>
+    <string name="title_activity_how_you_help">How can you help</string>
+    <string name="title_activity_redmap_info">Info</string>
+    <string name="how_you_help_text"><u>How can you help &gt;</u></string>
+    <string name="title_activity_log_sighting">New Sighting</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_startup">Redmap</string>
+    <string name="main_spot">Spot</string>
+    <string name="main_spot_description">Explore species of interest</string>
+    <string name="main_log">Log</string>
+    <string name="main_log_description">Log your sightings</string>
+    <string name="main_personal">My Redmap</string>
+    <string name="main_personal_description">See all your sightings</string>
+    <string name="main_how_you_are_helping">How can you help?</string>
+    <string name="main_navigate_to">Navigate to</string>
+    <string name="pick_time">Pick time</string>
+    <string name="regions_filter_label">Filter by Region</string>
+    <string name="search_title">Search</string>
+
+    <string-array name="country_arrays">
+        <item>Malaysia</item>
+        <item>United States</item>
+        <item>Indonesia</item>
+        <item>France</item>
+        <item>Italy</item>
+        <item>Singapore</item>
+        <item>New Zealand</item>
+        <item>India</item>
+    </string-array>
+
+    <string name="username">Username</string>
+    <string name="button_visit_web_text">Visit Redmap website</string>
+    <string name="button_log_it_label">Log it</string>
+
+    <string-array name="log_sighting_accuracy_options">
+        <item>Within 10 metres</item>
+        <item>Within 100 metres</item>
+        <item>Within 1 kilometre</item>
+        <item>Within 10 kilometres</item>
+    </string-array>
+
+    <string name="title_activity_log_sighting_select_image">Sighting image</string>
+    <string name="title_activity_log_sighting_location">Sighting location</string>
+    <string name="title_activity_create_account">New account</string>
+    <string name="title_activity_peronal_map">My Redmap</string>
+    <string name="title_activity_sighting_detail">Sighting detail</string>
+    <string name="personal_nav_map">Map</string>
+    <string name="personal_nav_photos">Photos</string>
+    <string name="alpha_mac_aoe">AlphaMacAOE.ttf</string>
+    <string name="title_activity_memory_monitor">MemoryMonitorActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    
+    <string name="app_id">INSERT_APP_ID_HERE</string><!-- Redmap -->
+    <string name="app_namespace">redmap_au</string><!-- Redmap -->
+
+	<style name="ButtonText">
+	    <item name="android:layout_width">wrap_content</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:textColor">#ffffff</item>
+	    <item name="android:minHeight">40dp</item>
+	    <item name="android:gravity">center</item>
+	    <item name="android:textSize">14sp</item>
+	    <item name="android:textStyle">bold</item>
+	    <item name="android:paddingTop">12dp</item>
+	    <item name="android:paddingRight">12dp</item>
+	    <item name="android:paddingBottom">12dp</item>
+	    <item name="android:paddingLeft">12dp</item>
+	</style>
+    
+</resources>

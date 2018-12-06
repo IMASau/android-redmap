@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+		android:id="@+id/button_redmap_info_menu_item"
+		android:showAsAction="always"
+		android:icon="@drawable/uibutton_icon_info"
+		></item>
+    
+    <item
+		android:id="@+id/button_visit_website_menu_item"
+		android:showAsAction="always"
+		android:title="@string/button_visit_web_text"
+		></item>
+
+</menu>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="redmap_blue">#0a2e5b</color>
+    <color name="redmap_red">#EE2E24</color>
+    <color name="redmap_muted">#888888</color>
+    <color name="pressed_redmap">#CC33B5E5</color>
+    <color name="default_background_colour">#FAFAFA</color>
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_selector"
+    android:clickable="false"
+    android:focusable="false"
+    android:focusableInTouchMode="false" >
+
+    
+    <ImageView
+        android:id="@+id/option_icon"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignBottom="@+id/option_description"
+        android:background="#fff"
+        android:duplicateParentState="true"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/fish_silhouette" />
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@string/main_navigate_to"
+        android:duplicateParentState="true"
+        android:src="@drawable/main_selector_arrow" />
+
+    <TextView
+        android:id="@+id/option_text"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_toLeftOf="@+id/arrow"
+        android:layout_toRightOf="@+id/option_icon"
+        android:duplicateParentState="true"
+        android:ellipsize="end"
+        android:gravity="bottom"
+        android:paddingLeft="5sp"
+        android:singleLine="true"
+        android:text="Red tide"
+        android:textColor="@color/redmap_blue"
+        android:textSize="20dp" >
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/option_description"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/option_text"
+        android:layout_below="@+id/option_text"
+        android:layout_toLeftOf="@+id/arrow"
+        android:duplicateParentState="true"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:paddingLeft="5sp"
+        android:singleLine="true"
+        android:text="Red tide"
+        android:textColor="#888"
+        android:textSize="15sp"
+        android:textStyle="italic" />
+
+</RelativeLayout>

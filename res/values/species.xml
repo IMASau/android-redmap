@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="species_names">
+		<item>Bony Fishes</item>
+		<item>Invertebrates</item>
+		<item>Shark &amp; Rays</item>
+		<item>Reptiles</item>
+		<item>Algae &amp; Plants</item>
+		<item>Mammals</item>
+	</string-array>
+	<string-array name="species_image">
+		<item>@drawable/species_image_bony_fishes</item>
+		<item>@drawable/species_image_invertebrates</item>
+		<item>@drawable/species_image_shark_and_rays</item>
+		<item>@drawable/species_image_reptiles</item>
+		<item>@drawable/species_image_algae_and_plants</item>
+		<item>@drawable/species_image_mammals</item>
+	</string-array>
+</resources>
